@@ -1,0 +1,31 @@
+% Definition von globalen Parametern, die derzeit auf der Titelseite verwendet werden. 
+% Keine Sonderzeichen verwenden!
+        % ä|Ä -> {\"a|A}, ö|Ö -> {\"o|O}, ü|Ü -> {\"u|U}, ß -> {\ss}
+
+%----------- Allgemeine Angaben -------------------------------------------------------------
+\newcommand{\praktikumTitel}{<Quest Name>}
+\newcommand{\projektTitel}{Das erste Abenteuer im \textit{The Witcher} Universum}
+\newcommand{\projektTitelKurz}{Das Einführungsabenteuer zum The Witcher P\&P RPG}
+
+\newcommand{\fakultaet}{<Name der Fakult{\"a}t>}
+\newcommand{\studiengang}{<Studiengang>}
+\newcommand{\schule}{The Witcher P\&P RPG}
+\newcommand{\ort}{Schriesheim}
+
+%----------- Angaben zur Person 1 -----------------------------------------------------------
+\newcommand{\personName}{<Autor>}
+
+%----------- Angaben zu Betreuer 1 ----------------------------------------------------------
+\newcommand{\betreuerName}{Prof. Dr. Peter M{\"u}ller}
+\newcommand{\betreuerSchule}{\schule} % Bei Befarf "\schule" durch andere Hochschule/Universität ersetzen
+
+%----------- Angaben zu Betreuer 2 (optional) -----------------------------------------------
+\newcommand{\zweiterbetreuerName}{Herbert Gie{\ss}er}
+\newcommand{\zweiterbetreuerSchule}{\schule} % Bei Befarf "\schule" durch andere Hochschule/Universität ersetzen
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}

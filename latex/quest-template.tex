@@ -1,0 +1,53 @@
+% Dies ist die Hauptseite des Dokumentes. Hier werden u.A. alle Einstellungen bzgl. des Layouts und Kapitel eingebunden.
+%Veränderungen müssen in folgenden Dateien vorgenommen werden:
+			%- einstellungen/layout.tex 
+			%- einstellungen/newCommands.tex
+			%- titelseite.tex
+			%- bibliography.bib
+			%- einzelne Kapitel-Dateien (inhalt/<kapitelname>.tex)
+			
+\input{einstellungen/newCommands.tex}       % eigene Befehle
+\input{einstellungen/layout.tex}			% Layouteinstellungen
+
+
+%------Beginn des Gesamtdokumentes--------------------------------------------------------
+\begin{document}
+
+\pagenumbering{roman}
+
+
+%--------------- Titelseite/Deckblatt ----------------------------------------------------
+\include{titelseite}	
+		
+%--------------- Vorwort -----------------------------------------------------------------
+\include{inhalt/vorwort}	
+
+%--------------- Inhaltsverzeichnis ------------------------------------------------------
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\tableofcontents % Inhaltsverzeichnis wird automatisch generiert
+\newpage
+
+
+\pagenumbering{arabic}	
+
+
+%--------------- Kapitel -----------------------------------------------------------------
+\include{inhalt/questablauf}					
+\include{inhalt/orte}					
+\include{inhalt/NPCs}
+
+
+%--------------- optionales Listings-Verzeichnis -----------------------------------------
+%\lstlistoflistings
+%\addcontentsline{toc}{chapter}{Listings}
+
+%--------------- optionales Tabellenverzeichnis ------------------------------------------
+%\listoftables
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
+%--------------- optionales Abbildungsverzeichnis ----------------------------------------
+%\listoffigures
+%\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+
+%------Ende des Dokumentes----------------------------------------------------------------
+\end{document}
